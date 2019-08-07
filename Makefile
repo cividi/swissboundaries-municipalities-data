@@ -28,7 +28,7 @@ all-check: all goodtables-check
 check-only: goodtables-check
 
 download: fetch-data unzip cleanup-unzip
-convert: conv-csv conv-geojson conv-gpkg cleanup-conv
+convert: conv-gpkg conv-csv conv-geojson cleanup-conv
 preview: preview-extract
 
 fetch-data:
@@ -43,10 +43,10 @@ conv-gpkg:
 	cd data && ogr2ogr -t_srs "EPSG:2056" $(DATA_NAME)-lv95.gpkg $(DATASET)/$(DATASET_FILE).shp
 
 conv-csv:
-	cd data && ogr2ogr -t_srs "EPSG:4326" $(DATA_NAME).csv $(DATASET)/$(DATASET_FILE).gpkg
+	cd data && ogr2ogr -t_srs "EPSG:4326" $(DATA_NAME).csv $(DATA_NAME).gpkg
 
 conv-geojson:
-	cd data && ogr2ogr -t_srs "EPSG:4326" $(DATA_NAME).geojson $(DATASET)/$(DATASET_FILE).gpkg
+	cd data && ogr2ogr -t_srs "EPSG:4326" $(DATA_NAME).geojson $(DATA_NAME).gpkg
 
 
 preview-extract:
