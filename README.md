@@ -1,3 +1,6 @@
+
+[![goodtables.io](https://goodtables.io/badge/github/n0rdlicht/swissbounderies-municipalities-data.svg)](https://goodtables.io/github/n0rdlicht/swissbounderies-municipalities-data)
+
 # Extract of municipal bounderies from swissBOUNDARIES3D
 
 This is a list of the current set of official municipalities ("Gemeinden") in Switzerland, compiled by [cividi](https://cividi.ch). The metadata was collected by us through web searches and public contributions, and is provided as "best effort", without any guarantee of correctness.
@@ -10,7 +13,11 @@ A GeoPackage was created based on the [Shapefile](https://www.stadt-zuerich.ch/p
 
 For [validation](#validation) a schema and rules are available in the `schema` section of the [Datapackage](https://frictionlessdata.io/specs/data-package/).
 
-Run `make` in the root folder to fetch and convert the data. You need to have **ogr2ogr**, **awk** and **curl** commands available on your system. (Note on Windwows: make sure to have both ogr2ogr, e.g. if you have QGIS installed `C:\Program Files\QGIS 3.8\bin`, in your system path as well as the `GDAL_DATA` variable, e.g. to `C:\Program Files\QGIS 3.8\share\gdal`, set)
+Run `make` in the root folder to fetch and convert the data. You need to have **ogr2ogr**, **awk** and **curl** commands available on your system. *Note on Windwows: make sure to have both ogr2ogr, e.g. if you have QGIS installed `C:\Program Files\QGIS 3.8\bin`, in your system path as well as the `GDAL_DATA` variable, e.g. to `C:\Program Files\QGIS 3.8\share\gdal`, set.*
+
+If you also want to run the validation step with `make all-check` you need to have **goodtables** installed.
+
+[![](https://assets.okfn.org/p/data/img/logo.png) Preview Data Package](https://data.okfn.org/tools/view?url=https%3A%2F%2Fraw.githubusercontent.com%2Fcividi%2Fswissbounderies-municipalities-data%2Fmaster%2Fdatapackage.json)
 
 ## Validation
 
